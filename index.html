@@ -3,13 +3,47 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mini blog</title>
+    <title>Color filter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
-        <h2>Lorem Ipsum</h2>
+    <div class="container">
+        <h2>Color filter</h2>
+        <input onkeyup="filter()" id="search" type="text" placeholder="Search"></input>
+        <button type="button" onclick="clearForm()">Clear</button>
+        <ul id="color_list">
+            <li>
+                <a href="#" onclick="changeColor(this)">Azure</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeColor(this)">Ivory</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeColor(this)">Coral</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeColor(this)">Wheat</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeColor(this)">Lime</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeColor(this)">Khaki</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeColor(this)">Olive</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeColor(this)">Cyan</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeColor(this)">Green</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeColor(this)">Fuchsia</a>
+            </li>
+        </ul>
     </div>
     <script src="script.js"></script>
 </body>
