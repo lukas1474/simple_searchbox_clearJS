@@ -38,3 +38,9 @@
 .container li a:hover {
     color: black;
 }
+
+.container li.inactive {
+    display: none;
+}
+
+

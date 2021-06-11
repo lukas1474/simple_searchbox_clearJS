@@ -8,14 +8,25 @@ const filter = () => {
         let filterColor = color[i].getElementsByTagName('a')[0];
 
         if(filterColor.innerHTML.toUpperCase().indexOf(filterValue) > -1){
-            color[i].style.display = '';
+            color[i].classList.remove('inactive');
 
         } else {
-            color[i].style.display = 'none';
+            color[i].classList.add('inactive');
         }
+    }
+
+    const mostAccurateColor = document.querySelector('#color_list li:not(.inactive) a')
+
+    if(mostAccurateColor && filterValue){
+        document.title = mostAccurateColor.innerHTML
+    } else {
+        document.title = 'Color filter';
     }
 }
 
 const changeColor = (event) => event.style.color = 'green';
 
-const clearForm = () => document.getElementById('search').value = '';
+const clearForm = () => {
+    document.getElementById('search').value = '';
+    document.title = 'Color filter';
+}
